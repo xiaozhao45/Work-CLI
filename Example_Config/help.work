@@ -1,0 +1,21 @@
+INFO="help:1.0@work"
+PWD=$(pwd)
+
+
+main_main() {
+    echo -e "\033[1;34m
+##################################################
+#               \033[1;32mWelcome To Work CLI!\033[0;34m               #
+##################################################\033[0m
+
+\033[1mUsage:\033[0m \033[36mwork\033[0m \033[33m<command>\033[0m [\033[33margs...\033[0m]
+\033[1mExecute shell commands:\033[0m \033[35mwork -c\033[0m '\033[37mcommand here\033[0m'
+
+\033[1mExamples:\033[0m
+→ \033[36mwork -c 'echo hello'\033[0m
+→ \033[36mwork help\033[0m"
+}
+
+if [ pass ]; then
+    main_main "$@"
+fi
