@@ -1,0 +1,32 @@
+INFO="new:1.0@work"
+
+if [ $# -eq 0 ]; then
+    echo "请提供文件名参数"
+    exit 1
+fi
+
+main_work() {
+    if ! cp ./template.work "./$1.work"; then
+        echo "复制模板文件失败"
+        exit 1
+    fi
+}
+
+main_cargo() {
+    cargo new "$1" || { echo "创建Rust项目失败"; exit 1; }
+}
+
+main_python() {
+    echo "print('Hello,world!')" > "./$1.py" || { echo "创建Python文件失败"; exit 1; }
+}
+
+if [[ $PWD =~ .*work ]]; then
+    main_work "$@"
+elif [[ $PWD =~ .*rust ]]; then
+    main_cargo "$@"
+elif [[ $PWD =~ .*python ]]; then
+    main_python "$@"
+else
+    echo "当前目录路径不支持初始化操作"
+    exit 1
+fi

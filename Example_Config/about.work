@@ -1,0 +1,13 @@
+INFO="about:1.0@work"
+current_dir=$(pwd)
+
+
+main_main() {
+    echo "Welcome To Work CLI!"
+    echo "This is a example srcipt..."
+    work help
+}
+
+if [ pass ]; then
+    main_main "$@"
+fi

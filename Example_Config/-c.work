@@ -1,0 +1,11 @@
+INFO="command:1.0@work"
+PWD=$(pwd)
+
+
+main_main() {
+    /bin/sh -c "$@"
+}
+
+if [ pass ]; then
+    main_main "$@"
+fi

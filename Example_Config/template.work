@@ -1,0 +1,11 @@
+INFO="template:1.0@work"
+PWD=$(pwd)
+
+
+main_main() {
+    echo "Welcome To Work CLI!"
+}
+
+if [ pass ]; then
+    main_main "$@"
+fi
